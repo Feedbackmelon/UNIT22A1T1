@@ -33,7 +33,7 @@
  }
 </style>
 <h1 id="doctitle">Unit 22 – P1</h1>
-<input type="button" id="showallpages"class="dontlisten" value="Toggle show all pages"/>
+<input type="button" id="showallpages"class="dontlisten" value="Toggle Page and Item Filtering"/>
 <div class="content">
 	<h1>Game Genres</h1>
 	<div id="buttons0" class="buttongroup">
@@ -439,10 +439,10 @@
 			rumble pack, getting hurt may trigger the rumble pack, and more.
 		</p>
 		<p>
-			The Rumble Pak was origionaly coneived by Nintendo as a peripheral for
+			The Rumble Pak was originally conceived by Nintendo as a peripheral for
 			their nintendo64 console. Due to the success of the Rumble Pak it quickly
 			became industry standard in the next generation of consoles. Most
-			rumble paks today are built into controlers however in the timer of the
+			rumble paks today are built into controllers however in the timer of the
 			N64 it was common to see third party rumble paks.
 		</p>
 		<div>
@@ -707,5 +707,6 @@
 		}
 	};
 	toggle = (toggle==true)? false : true;
+	toggleshowallpages();
 	document.getElementById("showallpages").addEventListener("click", toggleshowallpages);
 </script>
