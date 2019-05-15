@@ -696,10 +696,10 @@
 			console.log(distype[0]);
 		}
 		for(i=0; i<buttons.length; i++){
-			if (buttons[i].id != "showallpages"){
+			if (buttons[i].id != "showallpages"/* || buttons[i].class != "search-action flat-button"*/){
 				buttons[i].style.display = distype[1];
 				if (distype[1]=="block"){
-					pages[0].style.display = "block";
+					pages[contindex].style.display = "block";
 					buttons[i].style.display = "inline-block";					
 				}
 				console.log(distype[1]);
