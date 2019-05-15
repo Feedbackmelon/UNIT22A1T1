@@ -33,6 +33,7 @@
  }
 </style>
 <h1 id="doctitle">Unit 22 – P1</h1>
+<input type="button" id="showallpages"class="dontlisten" value="Toggle show all pages"/>
 <div class="content">
 	<h1>Game Genres</h1>
 	<div id="buttons0" class="buttongroup">
@@ -381,7 +382,7 @@
 		<div id="genrebuttons">
 			<input value="Microphone" type="button">
 			<input value="kinect" type="button">
-			<input value="Rumble Pack" type="button">
+			<input value="Rumble Pak" type="button">
 			<input Id="showall2" class="dontlisten" value="|Show All|" type="button">
 		</div>
 		<div class="pgchange">
@@ -429,14 +430,28 @@
 			<li>Get Fit with Mel B</li>
 		</ul>
 	</div>
-	<div id="Rumble Pack" class="genre">
-		<h1>Rumble Pack</h1>
+	<div id="Rumble Pak" class="genre">
+		<h1>Rumble Pak</h1>
 		<p>
-			A Rumble Pack is a peripheral that is commonly built into controllers.
+			A Rumble Pak is a peripheral that is commonly built into controllers.
 			The purpose of a rumble pack is to provide feedback to the player that they
 			can feel. For example, fireing a gun in a shooter may start the trigger the
 			rumble pack, getting hurt may trigger the rumble pack, and more.
 		</p>
+		<p>
+			The Rumble Pak was origionaly coneived by Nintendo as a peripheral for
+			their nintendo64 console. Due to the success of the Rumble Pak it quickly
+			became industry standard in the next generation of consoles. Most
+			rumble paks today are built into controlers however in the timer of the
+			N64 it was common to see third party rumble paks.
+		</p>
+		<div>
+			<b>Rumble Pak examples:</b>
+			<ul>
+				<li>Nintendo's Rumble Pak</li>
+				<li>N64 Gamester Rumble Pack</li>
+			</ul>
+		</div>
 	</div>
 	<div id="VR" class="genre">
 		<h1>Virtual Reality</h1>
@@ -669,7 +684,28 @@
 	//adds event listeners
 	AddListeners();
 	//Show all pages
-/*	function togelshowallpages(){
-		
-	}*/
+	let toggle = false;
+	function toggleshowallpages(){
+		toggle = (toggle==true)? false : true;
+		let pages = document.getElementsByClassName("content");
+		let buttons = document.getElementsByTagName("input");
+		let distype = (toggle!=true)?["block","none"]:["none","block"];
+		for(x=0; x<pages.length; x++){
+			pages[x].style.display = distype[0];
+			document.getElementsByClassName("pgchange")[x].style.display = distype[1];
+			console.log(distype[0]);
+		}
+		for(i=0; i<buttons.length; i++){
+			if (buttons[i].id != "showallpages"){
+				buttons[i].style.display = distype[1];
+				if (distype[1]=="block"){
+					pages[0].style.display = "block";
+					buttons[i].style.display = "inline-block";					
+				}
+				console.log(distype[1]);
+			}
+		}
+	};
+	toggle = (toggle==true)? false : true;
+	document.getElementById("showallpages").addEventListener("click", toggleshowallpages);
 </script>
