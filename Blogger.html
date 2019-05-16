@@ -236,6 +236,7 @@
 			<li>Jamestown</li>
 		</ul>
 	</div>
+	-->
 	<div id="Platformer" class="genre">
 		<h1>Platformer</h1>
 		<p>
@@ -252,7 +253,7 @@
 			<li>The Mario Franchise</li>
 			<li>Contra</li>
 		</ul>
-</div>-->
+</div>
 <div id="Survival" class="genre">
 	<h1>Survival</h1>
 	<p>
@@ -689,6 +690,9 @@
 			pages[x].style.display = distype[0];
 			document.getElementsByClassName("pgchange")[x].style.display = distype[1];
 			console.log(distype[0]);
+		}
+		for (x=0; x<genres.length; x++){
+			genres[x].style.display = "block";
 		}
 		for(i=0; i<buttons.length; i++){
 			if (buttons[i].id != "showallpages"/* || buttons[i].class != "search-action flat-button"*/){
